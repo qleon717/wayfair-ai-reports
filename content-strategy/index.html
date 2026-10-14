@@ -1,1 +1,485 @@
-file:///C:/Users/quinc/OneDrive/EXTERNSHIP/WAYFAIR/Wayfair-ai-reports/content-strategy/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Insights & Content Report | Wayfair area rug</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background: #f8f9fa; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+    .header { background: linear-gradient(135deg, #7B2D8E 0%, #5E1A6E 100%); color: white; padding: 40px; border-radius: 12px; margin-bottom: 30px; }
+    .header h1 { font-size: 2.2em; margin-bottom: 10px; }
+    .header .subtitle { font-size: 1.2em; opacity: 0.9; }
+    .header .meta { margin-top: 20px; display: flex; gap: 15px; flex-wrap: wrap; }
+    .header .meta-item { background: rgba(255,255,255,0.15); padding: 8px 16px; border-radius: 20px; font-size: 0.9em; }
+    .section { background: white; border-radius: 12px; padding: 30px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .section h2 { color: #7B2D8E; font-size: 1.5em; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #f0e6f4; }
+    .section h3 { color: #5E1A6E; font-size: 1.2em; margin: 25px 0 15px 0; }
+    .section > p { color: #666; margin-bottom: 20px; }
+    .exec-summary { background: linear-gradient(135deg, #f8f4fa 0%, #fff 100%); border-left: 4px solid #7B2D8E; }
+    .exec-summary p { font-size: 1.05em; margin-bottom: 15px; white-space: pre-line; }
+    .key-insights { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 20px; }
+    .insight-card { background: white; border: 1px solid #e0d4e6; border-radius: 8px; padding: 20px; text-align: center; }
+    .insight-card .number { font-size: 2.2em; font-weight: bold; color: #7B2D8E; }
+    .insight-card .label { font-size: 0.85em; color: #666; margin-top: 5px; }
+    .data-sources { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .data-source-card { background: #f8f9fa; border-radius: 8px; padding: 20px; }
+    .data-source-card h4 { color: #7B2D8E; margin-bottom: 12px; }
+    .data-source-card ul { list-style: none; padding-left: 0; }
+    .data-source-card li { padding: 8px 0; border-bottom: 1px solid #e9ecef; font-size: 0.95em; }
+    .data-source-card li:last-child { border-bottom: none; }
+    .content-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+    .content-card { background: #fff; border: 1px solid #e0e0e0; border-radius: 10px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; }
+    .content-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+    .content-card-header { background: linear-gradient(135deg, #7B2D8E 0%, #9B4DB8 100%); color: white; padding: 15px 20px; }
+    .content-card-header .type { font-size: 0.75em; text-transform: uppercase; letter-spacing: 1px; opacity: 0.9; }
+    .content-card-header h4 { font-size: 1.1em; margin-top: 5px; }
+    .content-card-body { padding: 20px; }
+    .content-card-body p { color: #555; margin-bottom: 15px; }
+    .data-tag { display: inline-block; background: #f0e6f4; color: #7B2D8E; padding: 6px 12px; border-radius: 15px; font-size: 0.85em; margin-bottom: 10px; }
+    .keywords { margin-top: 10px; }
+    .keyword { display: inline-block; background: #e9ecef; color: #666; padding: 4px 10px; border-radius: 12px; font-size: 0.8em; margin: 3px 3px 3px 0; }
+    .social-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
+    .social-post { background: #f8f9fa; border-radius: 8px; padding: 15px; }
+    .platform-badge { display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 0.75em; font-weight: 600; color: white; margin-bottom: 10px; }
+    .platform-badge.ig { background: linear-gradient(45deg, #f09433, #dc2743); }
+    .platform-badge.pin { background: #E60023; }
+    .platform-badge.fb { background: #1877F2; }
+    .platform-badge.tt { background: #000; }
+    .social-post p { font-size: 0.95em; margin-bottom: 8px; }
+    .hashtags { color: #7B2D8E; font-size: 0.85em; }
+    .campaign-card { background: linear-gradient(135deg, #f8f4fa 0%, #fff 100%); border: 1px solid #e0d4e6; border-radius: 10px; padding: 25px; margin-bottom: 20px; }
+    .campaign-card h4 { color: #5E1A6E; font-size: 1.3em; margin-bottom: 8px; }
+    .campaign-card .tagline { color: #7B2D8E; font-style: italic; font-size: 1.1em; margin-bottom: 15px; }
+    .campaign-card > p { margin-bottom: 20px; }
+    .campaign-details { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+    .campaign-detail { background: white; padding: 15px; border-radius: 8px; }
+    .campaign-detail h5 { color: #7B2D8E; font-size: 0.9em; margin-bottom: 8px; }
+    .campaign-detail p { font-size: 0.9em; color: #555; }
+    .email-ideas { display: flex; flex-direction: column; gap: 10px; }
+    .email-subject { display: flex; align-items: center; gap: 15px; background: #f8f9fa; padding: 15px 20px; border-radius: 8px; }
+    .email-subject .icon { font-size: 1.3em; }
+    .email-subject .subject-text { flex: 1; font-size: 1em; }
+    .email-subject .open-rate { background: #e0f2e9; color: #059669; padding: 5px 12px; border-radius: 15px; font-size: 0.8em; font-weight: 500; }
+    .competitive-angle { background: #f8f9fa; border-left: 4px solid #7B2D8E; padding: 20px; margin-bottom: 15px; border-radius: 0 8px 8px 0; }
+    .competitive-angle h4 { color: #5E1A6E; margin-bottom: 12px; }
+    .competitive-angle p { margin-bottom: 10px; font-size: 0.95em; }
+    .recommendation { display: flex; gap: 20px; margin-bottom: 15px; align-items: flex-start; }
+    .priority { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em; color: white; flex-shrink: 0; }
+    .priority.high { background: #7B2D8E; }
+    .priority.medium { background: #9B4DB8; }
+    .recommendation-content { flex: 1; background: #f8f9fa; padding: 15px 20px; border-radius: 8px; }
+    .recommendation-content h4 { color: #5E1A6E; margin-bottom: 8px; }
+    .recommendation-content p { font-size: 0.95em; color: #555; }
+    .footer { background: #5E1A6E; color: white; padding: 30px; border-radius: 12px; text-align: center; margin-top: 30px; }
+    .footer .logo { font-size: 1.2em; font-weight: bold; margin-bottom: 10px; }
+    .footer p { opacity: 0.9; font-size: 0.9em; margin-top: 5px; }
+    @media (max-width: 768px) {
+      .data-sources, .content-grid, .social-grid, .campaign-details { grid-template-columns: 1fr; }
+      .header .meta { flex-direction: column; gap: 10px; }
+      .recommendation { flex-direction: column; gap: 10px; }
+      .priority { margin: 0 auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>AI Insights & Content Report</h1>
+      <p class="subtitle">Wayfair area rug - washable</p>
+      <div class="meta">
+        <span class="meta-item">📅 October 3, 2026</span>
+        <span class="meta-item">📊 4 Key Data Points</span>
+        <span class="meta-item">💡 6 Content Ideas</span>
+        <span class="meta-item">🎯 3 Campaigns</span>
+      </div>
+    </header>
+    <section class="section exec-summary">
+      <h2>📋 Executive Summary</h2>
+      <p>Washable area rugs are an evergreen practical purchase, but shoppers do not want practical to mean plain. The strongest content opportunity is to make the decision feel simple: help broad category shoppers find a rug that fits their room, their daily messes, and their personal style. Lead with washable performance and sizing confidence, then bring in the warm neutrals, tactile texture, vintage-inspired pattern, and graphic modern looks shoppers are using to make rooms feel more finished.
+
+Competitive pressure is strongest at the low end. Walmart and Amazon prominently sell washable, non-slip, low-pile, and large-format rugs below $90 in the reviewed assortment, while Wayfair's strength is a more design-led assortment, designer collaboration equity, and the highest sampled customer rating. Content should not chase a commodity price story. Instead, it should clearly explain the value behind the purchase: better room fit, design point of view, practical care, verified shopper proof, and a visible good-better-best path that includes an accessible $90-$120 entry point.
+
+The recommended strategy balances awareness, consideration, and conversion through a connected content system: inspirational style edits for discovery; room-size, washability, material, and pile-height guidance for consideration; and shoppable collections, comparison modules, review proof, rug-pad bundles, and size-based recommendations for conversion. The evergreen campaign platform should make washable rugs feel like an easy yes for real homes, from high-traffic living rooms to dining spaces, bedrooms, entryways, and homes with pets or kids.</p>
+      <div class="key-insights">
+  <div class="insight-card">
+    <div class="number">14.05% CAGR</div>
+    <div class="label">Online retail is the fastest-growing area rug distribution channel</div>
+  </div>
+
+  <div class="insight-card">
+    <div class="number">12.44% CAGR</div>
+    <div class="label">Premium area rugs are the fastest-growing price segment</div>
+  </div>
+
+  <div class="insight-card">
+    <div class="number">$9.99-$89.69</div>
+    <div class="label">Walmart's sampled area rug price range, led by utility-focused washable options</div>
+  </div>
+
+  <div class="insight-card">
+    <div class="number">4.68/5</div>
+    <div class="label">Wayfair's sampled average area rug rating, the highest among reviewed competitors</div>
+  </div>
+</div>
+    </section>
+    <section class="section">
+      <h2>📊 Data Foundation</h2>
+      <p>Key insights extracted from your Project 2 and Project 3 reports that inform this content strategy:</p>
+      <div class="data-sources">
+        <div class="data-source-card">
+          <h4>📈 From Market Analysis (P2)</h4>
+          <ul><li>The market is shifting from flat printed patterns toward tactile, sculptural depth, including high-low carved texture, organic forms, and warm-neutral palettes.</li><li>Wayfair's current market set is concentrated below $200, while the premium segment is growing at a 12.44% CAGR and natural-fiber, artisan-crafted rugs are gaining shopper interest.</li><li>8' x 10' rugs account for 40% of analyzed products and 5' x 7' rugs account for 30%, making these the clearest core sizes for living rooms, bedrooms, and dining spaces.</li><li>Washable, synthetic, and polyester constructions support easy-care needs, but sustainability and durability concerns create a need for transparent material, care, and rug-pad education.</li></ul>
+        </div>
+        <div class="data-source-card">
+          <h4>🔍 From Competitor Analysis (P3)</h4>
+          <ul><li>Amazon and Walmart lead with function-first messaging around washable, machine washable, non-slip, low-pile, soft, lightweight, foldable, and stain-resistant rugs.</li><li>Walmart is the strongest value threat, with a sampled average price of $30.21, a $9.99 entry price, and the largest sampled review volume at 18,980 total reviews.</li><li>Wayfair's sampled assortment is more design-led, with 7 of 10 products associated with Loloi collaborations including Chris Loves Julia, Rifle Paper Co., Amber Lewis, and Angela Rose.</li><li>Wayfair leads sampled competitors in average rating at 4.68/5, creating an opportunity to pair trusted customer proof with stronger washable, non-slip, size, and care guidance.</li></ul>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <h2>💡 Content Ideas</h2>
+      <p>Strategic content recommendations, each tied to specific data insights from your reports:</p>
+      <div class="content-grid">
+  <div class="content-card">
+    <div class="content-card-header">
+      <div class="type">Blog Post</div>
+      <h4>How to Choose a Washable Area Rug for Real Life</h4>
+    </div>
+    <div class="content-card-body">
+      <p>A practical, room-by-room guide covering washable rug types, pile height, backing, pets and kids, dining-room spills, entryway traffic, and simple care habits. Include a decision tree that routes shoppers to low-pile, indoor/outdoor, plush, or patterned options based on household needs.</p>
+      <div class="data-tag">📊 P2 identifies easy-care synthetic and polyester constructions as a core demand driver, while P3 shows Amazon and Walmart repeatedly foreground washable, non-slip, and low-pile benefits.</div>
+      <div class="keywords"><span class="keyword">washable area rug</span><span class="keyword">best washable rugs</span><span class="keyword">washable rugs for pets and kids</span><span class="keyword">easy care area rugs</span></div>
+    </div>
+  </div>
+  <div class="content-card">
+    <div class="content-card-header">
+      <div class="type">Instagram Carousel</div>
+      <h4>The 5-Minute Rug Size Check</h4>
+    </div>
+    <div class="content-card-body">
+      <p>Create a saveable six-slide carousel: measure the seating area, use 8' x 10' as a practical living-room starting point, keep front furniture legs on the rug, give dining chairs room to pull back, and leave visible floor around hallway runners. End with a simple shop-by-size frame.</p>
+      <div class="data-tag">📊 P2 identifies choosing too small a rug as the most common buying mistake and shows 8' x 10' and 5' x 7' as the dominant analyzed sizes.</div>
+      
+    </div>
+  </div>
+  <div class="content-card">
+    <div class="content-card-header">
+      <div class="type">Video</div>
+      <h4>One Living Room, Three Washable Rug Moods</h4>
+    </div>
+    <div class="content-card-body">
+      <p>Show the same living room styled three ways: sculptural warm neutral, earthy vintage-inspired pattern, and graphic gradient grid. Call out how each look works with everyday cleanup and changes the room's mood without changing the furniture.</p>
+      <div class="data-tag">📊 P2 identifies Sculptural Neutral High-Low, Artistic Gradient Grid Modern, and Earthy Global Kilim Revival as three distinct style directions with broad room relevance.</div>
+      
+    </div>
+  </div>
+  <div class="content-card">
+    <div class="content-card-header">
+      <div class="type">Pinterest Pin</div>
+      <h4>Washable Rug Size Guide for Every Room</h4>
+    </div>
+    <div class="content-card-body">
+      <p>Design an infographic pin with room diagrams for living rooms, bedrooms, dining rooms, and runners. Include easy placement rules and a second pin variation focused on washable rugs for busy spaces.</p>
+      <div class="data-tag">📊 P2 provides detailed room-sizing and placement rules, while P3 indicates strong functional demand across large rugs, runners, small rugs, and entryway formats.</div>
+      <div class="keywords"><span class="keyword">area rug size guide</span><span class="keyword">washable rug size guide</span><span class="keyword">living room rug placement</span></div>
+    </div>
+  </div>
+  <div class="content-card">
+    <div class="content-card-header">
+      <div class="type">Buying Guide</div>
+      <h4>Washable Rugs: Find Your Best Match</h4>
+    </div>
+    <div class="content-card-body">
+      <p>Build an interactive buying guide that starts with room and lifestyle, then lets shoppers compare washability, pile height, material, indoor/outdoor use, pattern, color, size, and rug-pad compatibility. Add clear callouts for pet-friendly, kid-friendly, low-profile, and high-traffic choices.</p>
+      <div class="data-tag">📊 P3 recommends standardized functional comparison layers, while P2 recommends segmenting marketing by household need rather than style alone.</div>
+      <div class="keywords"><span class="keyword">machine washable rugs</span><span class="keyword">low pile washable rugs</span><span class="keyword">pet friendly washable rugs</span><span class="keyword">non slip rug options</span></div>
+    </div>
+  </div>
+  <div class="content-card">
+    <div class="content-card-header">
+      <div class="type">Email Series</div>
+      <h4>Find the Rug That Can Keep Up</h4>
+    </div>
+    <div class="content-card-body">
+      <p>A three-email browse-to-purchase sequence for washable-rug shoppers: start with room sizing, follow with lifestyle and style matching, then deliver a shoppable assortment with review proof, rug-pad education, and size-based recommendations.</p>
+      <div class="data-tag">📊 P2 highlights size mistakes, care needs, and rug-pad usage as key shopper education opportunities; P3 supports using Wayfair's strong ratings and review leaders more prominently.</div>
+      
+    </div>
+  </div></div>
+    </section>
+    <section class="section">
+      <h2>📱 Social Media Captions</h2>
+      <p>Ready-to-use captions optimized for each platform:</p>
+      <div class="social-grid">
+  <div class="social-post">
+    <div class="platform-badge ig">Instagram</div>
+    <p>Your rug should handle snack crumbs, muddy paws, and the occasional coffee wobble. Start with the room, choose a washable style you actually love, then let life happen. Bonus tip: for many living rooms, an 8' x 10' gives your seating area room to breathe.</p>
+    <div class="hashtags">#WashableRugs #LivingRoomIdeas #RugSizeGuide #HomeDecor</div>
+  </div>
+
+  <div class="social-post">
+    <div class="platform-badge ig">Instagram</div>
+    <p>same sofa. three completely different moods.<br><br>1. warm neutral texture<br>2. vintage-inspired color<br>3. graphic modern lines<br><br>Which one feels most like home?</p>
+    <div class="hashtags"></div>
+  </div>
+
+  <div class="social-post">
+    <div class="platform-badge pin">Pinterest</div>
+    <p><strong>How to Choose the Right Washable Rug Size</strong></p>
+    <p>Use this simple room-by-room guide to choose a washable rug for your living room, bedroom, dining room, or hallway. Get easy sizing and placement tips before you shop.</p>
+  </div>
+
+  <div class="social-post">
+    <div class="platform-badge fb">Facebook</div>
+    <p>A washable rug can make everyday rooms feel a little less precious—in the best way. Before choosing a pattern, start with the size. In a living room, make sure at least the front legs of your main seating rest on the rug. In a dining room, leave enough room for chairs to stay on the rug when pulled out. Small details, much more put-together room.</p>
+  </div>
+
+  <div class="social-post">
+    <div class="platform-badge tt">TikTok</div>
+    <p><strong>Hook:</strong> If your rug only looks good when nobody is home, this is for you.</p>
+    <p>Pick your room first. Need a living-room anchor? Start by checking whether an 8' x 10' gives your sofa and chairs enough coverage. Need dining-room peace of mind? Make sure chairs can slide back and stay on the rug. Then choose your mood: warm textured neutral, vintage-inspired pattern, or modern graphic. Practical can still be very you.</p>
+  </div>
+</div>
+    </section>
+    <section class="section">
+      <h2>🎯 Campaign Concepts</h2>
+      <p>Larger initiatives that bundle content around strategic themes:</p>
+      
+  <div class="campaign-card">
+    <h4>Campaign: "Made for the Mess, Chosen for the Room"</h4>
+    <div class="tagline">"Easy care. Your kind of style."</div>
+    <p>An evergreen washable-rug platform that makes performance feel personal. It starts with the everyday moments shoppers recognize—pets, spills, busy entryways, movie nights, and dining-room life—then helps them choose a rug by room, size, and style.</p>
+    <div class="campaign-details">
+    <div class="campaign-detail">
+      <h5>Content Pillars</h5>
+      <p>Washability and care; room-specific sizing; pet- and kid-friendly use cases; warm-neutral, vintage, and modern style stories; rug-pad education.</p>
+    </div>
+  
+    <div class="campaign-detail">
+      <h5>Format</h5>
+      <p>Shoppable category hub, buying guide, lifecycle email, short-form video, size-guide carousel, PDP modules, and retargeting creative.</p>
+    </div>
+  
+    <div class="campaign-detail">
+      <h5>Competitive Angle</h5>
+      <p>Meet the functional clarity shoppers see on Amazon and Walmart while offering a more design-led shopping experience, stronger size guidance, and trusted customer proof.</p>
+    </div>
+  
+    <div class="campaign-detail">
+      <h5>Seo Opportunity</h5>
+      <p>Target washable area rug, washable rugs for living room, washable rugs for pets, washable dining room rugs, and machine washable rug size guide.</p>
+    </div>
+  </div>
+  </div>
+  <div class="campaign-card">
+    <h4>Campaign: "Size It Right, Love It Longer"</h4>
+    <div class="tagline">"A better fit makes the whole room click."</div>
+    <p>A conversion-focused education campaign built around the most common rug-buying problem: choosing a size that is too small. Give shoppers quick visual rules, room calculators, and shoppable size routes that make a confident choice easier.</p>
+    <div class="campaign-details">
+    <div class="campaign-detail">
+      <h5>Content Pillars</h5>
+      <p>Living-room placement; dining-room clearance; bedroom coverage; runner spacing; furniture-leg placement; rug-pad fit.</p>
+    </div>
+  
+    <div class="campaign-detail">
+      <h5>Format</h5>
+      <p>Interactive size tool, blog guide, Pinterest diagrams, social carousel, PDP size callouts, triggered email, and on-site quiz.</p>
+    </div>
+  
+    <div class="campaign-detail">
+      <h5>Competitive Angle</h5>
+      <p>Move beyond commodity product titles by helping shoppers solve the full room-layout problem before they purchase.</p>
+    </div>
+  
+    <div class="campaign-detail">
+      <h5>Timing</h5>
+      <p>Always on, with heightened placement in new-home, moving, renovation, living-room, dining-room, and rug-category journeys.</p>
+    </div>
+  </div>
+  </div>
+  <div class="campaign-card">
+    <h4>Campaign: "Washable, With a Point of View"</h4>
+    <div class="tagline">"The easy-care rug that sets the tone."</div>
+    <p>A style-first discovery campaign that demonstrates how washable rugs can anchor three distinct looks: sculptural warm neutral, artistic graphic modern, and earthy global-inspired pattern.</p>
+    <div class="campaign-details">
+    <div class="campaign-detail">
+      <h5>Content Pillars</h5>
+      <p>Texture-forward neutrals; graphic statement rugs; vintage and global-inspired pattern; practical room use; mix-and-match styling.</p>
+    </div>
+  
+    <div class="campaign-detail">
+      <h5>Format</h5>
+      <p>Editorial landing page, creator-style Reels, Pinterest boards, collection tiles, shop-the-look modules, and style-quiz outcomes.</p>
+    </div>
+  
+    <div class="campaign-detail">
+      <h5>Cross Sell</h5>
+      <p>Rug pads, throw pillows, curtains, coffee tables, dining chairs, storage benches, and entryway lighting.</p>
+    </div>
+  
+    <div class="campaign-detail">
+      <h5>Micro Segment</h5>
+      <p>Sculptural Neutral High-Low, Artistic Gradient Grid Modern, and Earthy Global Kilim Revival.</p>
+    </div>
+  </div>
+  </div>
+    </section>
+    <section class="section">
+      <h2>📧 Email Subject Lines</h2>
+      <p>Subject lines organized by communication intent rather than unsupported performance estimates.</p>
+      <div class="email-ideas">
+  <div class="email-subject">
+    <span class="icon">✨</span>
+    <span class="subject-text">The washable rug trick that makes a room feel finished</span>
+    <span class="open-rate">Curiosity</span>
+  </div>
+  <div class="email-subject">
+    <span class="icon">🏠</span>
+    <span class="subject-text">What size rug does your room actually need?</span>
+    <span class="open-rate">Education</span>
+  </div>
+  <div class="email-subject">
+    <span class="icon">💡</span>
+    <span class="subject-text">Low pile, plush, or indoor/outdoor? Let’s narrow it down</span>
+    <span class="open-rate">Consideration</span>
+  </div>
+  <div class="email-subject">
+    <span class="icon">🌿</span>
+    <span class="subject-text">Warm neutrals, vintage color, or modern lines?</span>
+    <span class="open-rate">Curiosity</span>
+  </div>
+  <div class="email-subject">
+    <span class="icon">🎯</span>
+    <span class="subject-text">Find your washable rug by room and size</span>
+    <span class="open-rate">Conversion</span>
+  </div>
+  <div class="email-subject">
+    <span class="icon">🛒</span>
+    <span class="subject-text">Don’t forget the rug pad</span>
+    <span class="open-rate">Consideration</span>
+  </div></div>
+    </section>
+    
+    <section class="section">
+      <h2>✉️ Full Email Sequences</h2>
+      <p>Execution-ready email copy tailored to the audience, objective, and market findings.</p>
+      
+        <div class="campaign-card">
+          <h4>Washable Rug Confidence Series</h4>
+          <div class="tagline">Audience: Broad category shoppers who viewed washable area rugs, used rug-related filters, or engaged with area-rug content without purchasing.</div>
+          <p><strong>Purpose:</strong> Reduce decision friction around sizing, everyday performance, and style so shoppers can move from browsing to a confident purchase.</p>
+          
+            <div class="competitive-angle">
+              <h4>Email 1: What size rug does your room actually need?</h4>
+              <p><strong>Preview:</strong> A few easy rules can help your room look more pulled together.</p>
+              <p><strong>Opening:</strong> A good rug does more than cover the floor. It gives your furniture a place to land.</p>
+              <p>For many living rooms, an 8&#39; x 10&#39; is a practical place to start because it can fit under the front legs of your sofa and chairs. In a dining room, choose a size that keeps chairs on the rug when they slide back. And for runners, leave a little floor showing on both sides. Start with your room, then find the washable style that feels right for it.</p>
+              <p><strong>CTA:</strong> Find Your Rug Size</p>
+            </div>
+            <div class="competitive-angle">
+              <h4>Email 2: Low pile, plush, or indoor/outdoor? Let’s narrow it down</h4>
+              <p><strong>Preview:</strong> Choose a washable rug that fits the way your room gets used.</p>
+              <p><strong>Opening:</strong> The best rug for your home is the one that works hard without looking like it tried too hard.</p>
+              <p>Busy dining room or entryway? A low-profile washable rug can make everyday cleanup feel more manageable. Want something soft underfoot in a bedroom or lounge space? Look for a plusher feel that suits lighter traffic. Need extra versatility? Indoor/outdoor styles can be a smart option for spaces that see more mess, moisture, or movement.</p>
+              <p><strong>CTA:</strong> Shop by Lifestyle</p>
+            </div>
+            <div class="competitive-angle">
+              <h4>Email 3: Find a washable rug that feels like you</h4>
+              <p><strong>Preview:</strong> Shop warm texture, vintage-inspired pattern, and graphic modern looks.</p>
+              <p><strong>Opening:</strong> Practical is just the starting point.</p>
+              <p>Choose a textured neutral for a calm, grounded room. Go vintage-inspired when you want color and character that still plays nicely with everyday furniture. Or bring in a graphic pattern to define an open living or dining space. Add a properly sized rug pad for extra cushioning and support, then enjoy the room you actually live in.</p>
+              <p><strong>CTA:</strong> Shop Washable Rugs</p>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+      <h2>🎬 Short-Form Video Scripts</h2>
+      <p>Ready-to-produce concepts for TikTok and Instagram Reels with hooks, visual direction, copy, and CTAs.</p>
+      
+        <div class="campaign-card">
+          <h4>Stop Buying Rugs That Are Too Small</h4>
+          <div class="tagline">TikTok / Instagram Reels</div>
+          <p><strong>Hook:</strong> The fastest way to make a living room feel off? A rug that is way too small.</p>
+          <p><strong>Visual Direction:</strong> Use a top-down living-room layout, then cut to a real room with a too-small rug. Replace it with a correctly scaled washable 8&#39; x 10&#39; rug and show front furniture legs landing on the rug. End on a clean, shoppable room shot.</p>
+          <p><strong>Script:</strong> Before you fall for a pattern, check the footprint. Your rug should connect the seating area, not float under the coffee table by itself. For many living rooms, try an 8&#39; x 10&#39; so the front legs of your sofa and chairs can sit on it. Shopping for a dining room? Pull a chair back before you decide. If it stays on the rug, you’re on the right track. Now pick the washable style that makes the room feel like yours.</p>
+          <p><strong>On-Screen Text:</strong> the too-small rug problem • front furniture legs = on the rug • measure first. then choose your favorite.</p>
+          <p><strong>CTA:</strong> Find Your Rug Size</p>
+          <div class="data-tag">📊 P2 identifies undersized rugs as the most common purchase mistake and identifies 8&#39; x 10&#39; as the leading analyzed size at 40%.</div>
+        </div>
+        <div class="campaign-card">
+          <h4>One Room, Three Washable Rug Personalities</h4>
+          <div class="tagline">TikTok / Instagram Reels</div>
+          <p><strong>Hook:</strong> Same room. Same sofa. Completely different energy.</p>
+          <p><strong>Visual Direction:</strong> Use quick match cuts to change only the rug, with natural-light styling. Feature a cream textured look, an earthy vintage-inspired flatweave look, and a charcoal-to-neutral graphic look. Show a quick close-up of pile or woven texture for each.</p>
+          <p><strong>Script:</strong> First: warm textured neutral. Soft, calm, and easy to build around. Next: earthy vintage-inspired pattern. A little color, a little character, and very forgiving for real-life traffic. Last: graphic modern lines. This one gives an open room a clear focal point. The takeaway? A washable rug can handle daily life and still be the thing that makes the room feel finished.</p>
+          <p><strong>On-Screen Text:</strong> 1. warm textured neutral • 2. earthy vintage-inspired pattern • 3. graphic modern statement</p>
+          <p><strong>CTA:</strong> Shop Washable Rugs by Style</p>
+          <div class="data-tag">📊 P2 identifies Sculptural Neutral High-Low, Earthy Global Kilim Revival, and Artistic Gradient Grid Modern as key emerging style directions.</div>
+        </div>
+    </section>
+    <section class="section">
+      <h2>⚔️ Competitive Content Angles</h2>
+      <p>Content strategies that directly address gaps identified in competitor analysis:</p>
+      
+  <div class="competitive-angle">
+    <h4>Angle: "Design-led washability, not utility alone"</h4>
+    <p><strong>Competitor Gap:</strong> Amazon and Walmart prominently communicate washable, non-slip, low-pile, foldable, lightweight, and soft benefits, but their sampled assortments are primarily positioned around value and utility.</p>
+    <p><strong>Wayfair Opportunity:</strong> Pair practical feature clarity with style-led collection storytelling, including warm neutrals, elevated vintage motifs, florals, abstract designs, and designer-collaboration credibility where eligible.</p>
+  </div>
+
+  <div class="competitive-angle">
+    <h4>Angle: "Value clarity without a commodity race"</h4>
+    <p><strong>Competitor Gap:</strong> Walmart's sampled area rugs range from $9.99 to $89.69 and Amazon's range from $12.99 to $89.99, creating a strong low-price anchor for shoppers.</p>
+    <p><strong>Wayfair Opportunity:</strong> Build a clear $90-$120 opening-price ladder for select washable 5' x 7' and 8' x 10' options, then explain upgrades through design, size, finish, performance, customer proof, and room guidance rather than competing on price alone.</p>
+  </div>
+
+  <div class="competitive-angle">
+    <h4>Angle: "Turn ratings into reassurance"</h4>
+    <p><strong>Competitor Gap:</strong> Walmart has the deepest sampled review volume, while Wayfair's product proof is less central to the observed functional shopping story.</p>
+    <p><strong>Wayfair Opportunity:</strong> Use Wayfair's 4.68/5 sampled average rating and proven review leaders in category modules, product comparison, shoppable editorial, and email. Pair ratings and customer photos with practical messages about room placement, softness, washability, and everyday use.</p>
+  </div>
+
+    </section>
+    <section class="section">
+      <h2>📅 Recommended Content Priorities</h2>
+      <p>Based on trend momentum and competitive gaps, here's the suggested priority order:</p>
+      
+  <div class="recommendation">
+    <div class="priority high">1</div>
+    <div class="recommendation-content">
+      <h4>Launch a washable-rug decision hub</h4>
+      <p>Create one high-intent destination that lets shoppers choose by room, size, washability, pile height, backing compatibility, material, style, and household need. This directly addresses the functional discoverability gap identified in P3 while supporting P2's need-based segmentation recommendation.</p>
+    </div>
+  </div>
+  <div class="recommendation">
+    <div class="priority high">2</div>
+    <div class="recommendation-content">
+      <h4>Make room-size education unavoidable</h4>
+      <p>Deploy a size guide, room diagrams, calculator, PDP placement modules, and browse-triggered email. P2 identifies choosing a rug that is too small as the most common mistake, and 8' x 10' plus 5' x 7' account for 70% of the analyzed product sizes.</p>
+    </div>
+  </div>
+  <div class="recommendation">
+    <div class="priority medium">3</div>
+    <div class="recommendation-content">
+      <h4>Build washable style edits around three visual directions</h4>
+      <p>Merchandise warm sculptural neutrals, artistic gradient grids, and earthy global-inspired patterns as distinct shopper pathways. This gives broad shoppers an easier way to browse by mood while moving Wayfair beyond generic functional messaging.</p>
+    </div>
+  </div>
+  <div class="recommendation">
+    <div class="priority medium">4</div>
+    <div class="recommendation-content">
+      <h4>Strengthen conversion with proof, bundles, and a price ladder</h4>
+      <p>Feature ratings, customer imagery, rug-pad recommendations, and accessible entry-price options. This helps defend against Walmart and Amazon's utility-and-value positioning while reinforcing Wayfair's design authority and stronger sampled average rating.</p>
+    </div>
+  </div>
+    </section>
+    <footer class="footer">
+      <div class="logo">Wayfair | AI Insights & Content Agent</div>
+      <p>Report generated from Market Trend Discovery (P2) and Competitor Monitoring (P3) data</p>
+      <p>Category: area rug | Focus: washable | Date: October 3, 2026</p>
+    </footer>
+  </div>
+</body>
+</html>
